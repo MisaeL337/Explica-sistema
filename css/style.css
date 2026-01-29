@@ -1,0 +1,188 @@
+:root {
+    --primary-color: #d4af37; /* Dourado */
+    --bg-dark: #121212;
+    --bg-card: #1e1e1e;
+    --text-light: #f5f5f5;
+    --text-gray: #a0a0a0;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: rgba(18, 18, 18, 0.95);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-btn {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--bg-dark);
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Features */
+.features {
+    padding: 5rem 10%;
+    background-color: var(--bg-dark);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: var(--text-gray);
+}
+
+/* How it works */
+.steps {
+    padding: 5rem 10%;
+    background-color: #1a1a1a;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-right: 1.5rem;
+    opacity: 0.5;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-gray);
+    border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .grid { grid-template-columns: 1fr; }
+}
